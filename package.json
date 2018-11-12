@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "realtor_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,8 @@
     "react-dom": "^16.6.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "reinit": "0.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
