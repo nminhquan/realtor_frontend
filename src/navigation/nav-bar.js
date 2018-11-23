@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Collapse,
   Navbar,
@@ -10,7 +10,12 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem,
+  FormGroup,
+  Label, 
+  InputGroup, InputGroupAddon,
+  Input
+} from "reactstrap";
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -35,26 +40,36 @@ export default class NavBar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
+                <FormGroup>
+                  <InputGroup>
+                  <InputGroupAddon addonType="prepend">Search@</InputGroupAddon>
+                  <Input
+                    type="search"
+                    name="search"
+                    id="exampleSearch"
+                    placeholder="search address"
+                  />
+                  </InputGroup>
+                  
+                </FormGroup>
+              </NavItem>
+              <NavItem>
                 <NavLink href="/categories/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">About</NavLink>
+                <NavLink href="https://github.com/reactstrap/reactstrap">
+                  About
+                </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Categories
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
-                    Kitchen
-                  </DropdownItem>
-                  <DropdownItem>
-                    Living Room
-                  </DropdownItem>
+                  <DropdownItem>Kitchen</DropdownItem>
+                  <DropdownItem>Living Room</DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>
-                    Outdoor
-                  </DropdownItem>
+                  <DropdownItem>Outdoor</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
